@@ -1,0 +1,72 @@
+.column {
+    float: left;
+    display: block;
+}
+
+.column-half {
+    width: 50%;
+    text-align: center;
+}
+
+.font-example-1 {
+    font: normal small-caps 24px/14px fantasy;
+}
+
+.font-example-2 {
+    font-style: normal;
+    font-weight: normal;
+    font-family: fantasy;
+    font-variant: small-caps;
+    font-size: 24px;
+    line-height: 14px;
+}
+
+.color-example-1,
+.color-example-2{
+    height: 200px; /* Высота блока */
+    width: 200px; /* Ширина блока */
+    overflow: auto; /* Добавляем полосы прокрутки */
+    padding-left: 15px; /* Отступ от текста слева */
+    border: 1px solid #000;
+}
+
+.color-example-1 {
+    background: url("../images/pizza/pizza23.jpg") center center no-repeat ;
+}
+
+.color-example-2 {
+    background: url("../images/pizza/pizza23.jpg");
+    background-clip: content-box;
+}
+
+.text-example-1 {
+    direction: rtl;
+}
+
+.text-example-2 {
+    letter-spacing: 5px;
+}
+
+.text-example-3 {
+    text-decoration: underline;
+}
+
+.text-example-4 {
+    text-shadow: 1px 1px #fc0000;
+}
+
+.text-example-5 {
+    word-spacing: 10px;
+}
+
+@media screen and (min-width: 1180px) {
+    body {
+        background-color: #ff9619;
+    }
+}
+
+@media screen and (max-width: 600px) {
+   .column-half {
+       width: 100%;
+   }
+}

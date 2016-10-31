@@ -1,0 +1,132 @@
+body {
+    background: #eee;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.header {
+    background: #32e2a2;
+    height: 100px;
+    line-height: 100px;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo img {
+    cursor: pointer;
+    max-height: 100px;
+}
+
+.header-logo {
+    float: left;
+    line-height: normal;
+}
+
+nav {
+    float: right;
+}
+
+.header-menu-item {
+    display: block;
+    float: left;
+    padding: 0 20px;
+}
+
+.header-menu-item a {
+    text-transform: uppercase;
+    color: #683a95;
+    font: 600 20px 'Montserrat', sans-serif;
+}
+
+.header-sub-menu {
+    position: relative;
+}
+
+.header-sub-menu-item {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 65px;
+    line-height: 35px;
+    width: 200px;
+    text-align: right;
+
+    background: rgba(0, 0, 0, 0.3);
+    padding-right: 10px;
+    border-bottom: 1px solid #683a95;
+
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+
+    transform: translate(-100vw, 0);
+}
+
+.header-sub-menu-item:nth-child(1) {
+    top: 0;
+    transition-delay: 0.2s;
+}
+
+.header-sub-menu-item:nth-child(2) {
+    top: 35px;
+    transition-delay: 0.4s;
+}
+
+.header-sub-menu-item:nth-child(3) {
+    top: 70px;
+    transition-delay: 0.6s;
+}
+
+.header-sub-menu-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+
+    -webkit-transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    -o-transition: width .2s ease;
+    transition: width .2s ease;
+}
+
+.header-sub-menu-item:hover::after {
+    width: 100%;
+}
+
+.header-menu-item:hover .header-sub-menu-item {
+    transform: translate(0, 0);
+}
